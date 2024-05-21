@@ -1,5 +1,5 @@
 export interface IConfig {
-    intentos?: number,
+    intentos: number,
     tiempoEmpleado?: number,
     puntos?: number
 }

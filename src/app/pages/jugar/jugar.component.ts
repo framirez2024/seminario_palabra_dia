@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IConfigJuego } from 'src/app/Interfaces/iconfig-juego';
 import { IFrase } from 'src/app/Interfaces/ifrase';
+import { INivel } from 'src/app/Interfaces/inivel';
 import { FrasesServicesService } from 'src/app/services/frases-services.service';
 
 @Component({
@@ -9,9 +11,18 @@ import { FrasesServicesService } from 'src/app/services/frases-services.service'
 })
 export class JugarComponent implements OnInit {
 
-    frases: IFrase[] = [];
-    palabra: string = "";
-    fraseArray: string[] = [];
+    public frases: IFrase[] = [];
+
+    public config: IConfigJuego = {
+        juegoTerminado: false,
+        partidaGanada: false,
+        nivel: {
+            nivel: 'normal',
+            intentos: 6
+        },
+        intentos: 6,
+        modoJuego: 'normal'
+    }
 
     constructor(
         public frasesService: FrasesServicesService
@@ -19,19 +30,16 @@ export class JugarComponent implements OnInit {
 
     }
 
-    ngOnInit(): void {
-        this.cargarFrases();
-    }
-
-    cargarFrases() {
-        this.frasesService.all().subscribe(data => {
-            this.frases = data;
-            console.log(this.frases)
+    ngOnInit() {
+        this.frasesService.all().subscribe((res: IFrase[]) => {
+            res.forEach((p: IFrase) => {
+                this.frases.push(p);
+            });
         });
     }
 
-    seleccionarFrase(): void {
+    cambiarNivel(nivel: INivel): void {
 
-        console.log("Frases.. ", this.frases);
+        this.config.nivel = nivel;
     }
 }

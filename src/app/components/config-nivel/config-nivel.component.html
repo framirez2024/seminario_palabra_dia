@@ -1,0 +1,33 @@
+<button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#nivelModal">
+    Configurar
+</button>
+
+<div class="modal" tabindex="-1" id="nivelModal">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ajustes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body container">
+                <div class="col-md-7 col-sm-12 mx-auto">
+                    <form [formGroup]="formularioNivel" (ngSubmit)="agregarNivel()">
+                        <div class="row my-2">
+                            <label class="col">Escoger nivel</label>
+                            <div class="col">
+                                <select class="form-select" formControlName="nivel">
+                                    <option>- Selecciona el nivel -</option>
+                                    <option *ngFor="let nivel of niveles" [value]="nivel.id">{{nivel.nivel}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid mt-5 sticky-bottom">
+                            <button type="submit" class="btn btn-primary btn-full">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

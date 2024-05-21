@@ -1,4 +1,5 @@
-<app-temporizador />
-<app-fila-tablero
-    *ngFor="let input of [].constructor(config.intentos); let j = index"  
-/>
+<app-temporizador [estado]="!configJuego.juegoTerminado" (tiempoEmpleado)="validarPuntuacion($event)" />
+<div *ngIf="frase">
+    <app-fila-tablero *ngFor="let input of [].constructor(configJuego.nivel?.intentos); let j = index" [frase]="frase"
+        [indice]="j" (filaGanadora)="validarFila($event)" [filaActual]="filaActual == j" />
+</div>

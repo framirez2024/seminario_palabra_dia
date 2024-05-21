@@ -7,7 +7,11 @@ import { Injectable } from '@angular/core';
 export class StorageServiceService {
 
   private localStorageKey = 'config';
-  private config: IConfig = {};
+  private config: IConfig = {
+    intentos: 0,
+    puntos: 0,
+    tiempoEmpleado: 0
+  };
 
   constructor() { }
 

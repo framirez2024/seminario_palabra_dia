@@ -1,0 +1,32 @@
+<button type="button" class="btn btn-primary btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	Posiciones
+</button>
+
+<div class="modal" tabindex="-1" id="exampleModal">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Mejores puntuaciones</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Correo</th>
+							<th>Tiempo empleado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let puntuacion of puntuaciones">
+							<td>{{puntuacion.id}}</td>
+							<td>{{puntuacion.correo}}</td>
+							<td>{{puntuacion.tiempo_empleado}} segundos</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

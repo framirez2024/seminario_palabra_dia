@@ -1,6 +1,14 @@
 <div class="">
-    <ul>
-        <li *ngFor="let frase of frases; let j = index" >{{frase.frase}}</li>
-    </ul>
-    <app-tablero-custom></app-tablero-custom>
+    <div class="w-full d-flex justify-content-between">
+        <div>menu</div>
+        <div class="text-center">
+            <h1 class="fs-5 text-uppercase fw-bold mb-0">la palabra del dia</h1>
+            <h2 class="fs-6 text-uppercase text-muted fw-bold mb-0">({{config.nivel?.nivel}})</h2>
+        </div>
+        <div>
+            <app-posiciones />
+            <app-config-nivel (cambioDeNive)="cambiarNivel($event)" />
+        </div>
+    </div>
+    <app-tablero-custom *ngIf="frases.length > 1 && config.nivel?.intentos" [configJuego]="config" [frases]="frases" />
 </div>

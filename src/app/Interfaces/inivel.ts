@@ -1,5 +1,5 @@
 export interface INivel {
-    id: number,
+    id?: string,
     nivel: string,
     intentos: number
 }

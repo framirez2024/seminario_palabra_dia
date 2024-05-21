@@ -15,7 +15,11 @@ import { StorageServiceService } from 'src/app/services/storage-service.service'
 export class EscogerNivelComponent implements OnInit {
 
   public niveles: INivel[] = [];
-  public config: IConfig = {};
+  public config: IConfig = {
+    intentos: 0,
+    puntos: 0,
+    tiempoEmpleado: 0
+  };
 
   formularioNivel = new FormGroup({
     nivel: new FormControl('')

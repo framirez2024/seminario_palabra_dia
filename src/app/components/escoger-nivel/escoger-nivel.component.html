@@ -1,18 +1,2 @@
-<p>escoger-nivel works!</p>
 <div>
-    <form [formGroup]="formularioNivel" (ngSubmit)="agregarNivel()">
-        <div class="my-2">
-            <!-- <label>Escoger nivel</label> -->
-            <select class="form-control" formControlName="nivel">
-                <option>- Selecciona el nivel -</option>
-                <option 
-                    *ngFor="let nivel of niveles"
-                    [value]="nivel.intentos"
-                >{{nivel.nivel}}</option>
-            </select>
-        </div>
-        <div class="my-2">
-            <button class="btn btn-primary btn-full">Escoger nivel</button>
-        </div>
-    </form>
 </div>

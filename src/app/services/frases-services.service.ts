@@ -15,7 +15,7 @@ export class FrasesServicesService {
     private httpClient: HttpClient
   ) { }
 
-  all(): Observable<any> {
-    return this.httpClient.get<any>(`${environment.apiUrl}${this.endpoint}`);
+  public all(): Observable<any> {
+    return this.httpClient.get(`${environment.apiUrl}${this.endpoint}`);
   }
 }

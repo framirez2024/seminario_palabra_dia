@@ -11,9 +11,71 @@
     {
       "id": "f5d6",
       "frase": "actor"
+    },
+    {
+      "id": "b623",
+      "frase": "altar"
+    },
+    {
+      "id": "488b",
+      "frase": "antes"
+    },
+    {
+      "id": "0256",
+      "frase": "amiri"
+    },
+    {
+      "id": "9cb0",
+      "frase": "nadar"
+    },
+    {
+      "id": "14a3",
+      "frase": "lucia"
+    },
+    {
+      "id": "5128",
+      "frase": "mario"
+    },
+    {
+      "id": "5c7d",
+      "frase": "matar"
+    },
+    {
+      "id": "41d9",
+      "frase": "coser"
+    },
+    {
+      "id": "def1",
+      "frase": "gozar"
+    },
+    {
+      "id": "cb48",
+      "frase": "viaja"
+    },
+    {
+      "id": "2ba0",
+      "frase": "cazar"
+    },
+    {
+      "id": "f607",
+      "frase": "tener"
+    },
+    {
+      "id": "b856",
+      "frase": "mover"
+    },
+    {
+      "id": "04df",
+      "frase": "salte"
     }
   ],
-  "posiciones": [],
+  "posiciones": [
+    {
+      "id": "366a",
+      "correo": "jhondoe@mail.com",
+      "tiempo_empleado": 11
+    }
+  ],
   "nivel_dificultad": [
     {
       "id": "1",
@@ -23,7 +85,7 @@
     {
       "id": "2",
       "nivel": "normal",
-      "intentos": 5
+      "intentos": 6
     },
     {
       "id": "3",
